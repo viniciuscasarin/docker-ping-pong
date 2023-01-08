@@ -1,0 +1,15 @@
+{
+  "name": "referee",
+  "version": "1.0.0",
+  "description": "Its a ping pong referee, responsible to start and stop matches",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --trace-warnings index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinicius Casarin",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}

@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  ping:
+    build: './ping'
+    container_name: ping
+    networks:
+      - compose-bridge
+    ports:
+      - 3030:3030
+
+  pong:
+    build: './pong'
+    container_name: pong
+    networks:
+      - compose-bridge
+    ports:
+      - 3033:3033
+
+  referee:
+    build: './referee'
+    container_name: referee
+    networks:
+      - compose-bridge
+    ports:
+      - 3000:3000
+    depends_on:
+      - ping
+      - pong
+
+networks:
+  compose-bridge:
+    driver: bridge
